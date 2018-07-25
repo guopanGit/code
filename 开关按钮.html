@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+    }
+    .btn-wrap {
+      width: 70px;
+     display: inline-block;
+      position: relative;
+      border: #e7e9ed solid 1px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    .btn-off {
+      display: inline-block;
+      color: #399bff;
+      text-align: center;
+      line-height: 20px;
+      width: 31px;
+      height: 20px;
+      padding-left: 1px;
+    }
+
+    .btn-on {
+      display: inline-block;
+      color: #399bff;
+      text-align: center;
+      line-height: 20px;
+      width: 31px;
+      height: 20px;
+      padding-left: 1px;
+    }
+    .off-shade{
+      width: 35px;
+      height: 24px;
+      background-color: #399bff;
+      border-radius: 4px 0 0 4px;
+      border-right:1px solid #e7e9ed;
+      position: absolute;
+      top: -1px;
+      left: -1px;
+    }
+    .on-shade{
+      border-radius: 0 4px 4px 0;
+      border-left:1px solid #e7e9ed;
+      border-right:0;
+      top: -1px;
+      left: 35px;
+    }
+  </style>
+</head>
+<body>
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade"></div>
+</div>
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade"></div>
+</div>
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade"></div>
+</div>
+
+
+
+
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade on-shade"></div>
+</div>
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade on-shade"></div>
+</div>
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade on-shade"></div>
+</div>
+<div class="btn-wrap">
+  <div class="btn-off">关闭</div>
+  <div class="btn-on">开放</div>
+  <div class="off-shade on-shade"></div>
+</div>
+
+
+
+
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script type="text/javascript">
+  // 开关按钮
+  $('.off-shade').on('click', function () {
+    if( $(this).hasClass('on-shade')){
+      $(this).removeClass('on-shade')
+    } else {
+      $(this).addClass('on-shade')
+    }
+  })
+</script>
+</body>
+</html>
